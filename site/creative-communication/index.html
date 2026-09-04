@@ -850,7 +850,7 @@
       </div>
     </div>
     <div class="tb-div"></div>
-    <a class="tb-link" href="#cta" data-cursor-hover>Contact</a>
+    <a class="tb-link" href="/contact/" data-cursor-hover>Contact</a>
     <a class="tb-link" href="#" title="Coming soon" data-cursor-hover>Career</a>
     <a class="tb-link" href="#" title="Coming soon" data-cursor-hover>Blog</a>
     <div class="tb-div"></div>
@@ -1342,7 +1342,7 @@
             <li><a href="/#work" data-cursor-hover>Case Studies</a></li>
             <li><a href="/#testimonials" data-cursor-hover>Our Clients</a></li>
             <li><a href="#faq" data-cursor-hover>FAQ</a></li>
-            <li><a href="#cta" data-cursor-hover>Contact Us</a></li>
+            <li><a href="/contact/" data-cursor-hover>Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1403,6 +1403,133 @@
 
 </div>
 </main>
+
+<a id="wa-fab" href="https://wa.me/917899913338?text=Hi%20DG5%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener" aria-label="Chat with DG5 on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none"><path fill="#fff" d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.87 6.4L4.4 27.6l6.36-1.66A11.9 11.9 0 0 0 16.02 27C22.64 27 28 21.62 28 15S22.64 3 16.02 3Z"/><path fill="#25D366" d="M16.02 4.4C10.18 4.4 5.4 9.16 5.4 15c0 2.1.6 4.06 1.65 5.72l.26.41-.87 3.18 3.27-.85.4.24A10.55 10.55 0 0 0 16.02 25.6c5.84 0 10.6-4.76 10.6-10.6S21.86 4.4 16.02 4.4Z"/><path fill="#fff" d="M12.4 9.9c-.24-.53-.5-.54-.73-.55h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.7 0 1.6 1.17 3.14 1.33 3.36.16.22 2.27 3.64 5.6 4.96 2.77 1.1 3.33.88 3.93.82.6-.06 1.94-.79 2.21-1.55.27-.76.27-1.42.19-1.55-.08-.14-.3-.22-.62-.38-.32-.16-1.94-.96-2.24-1.07-.3-.11-.52-.16-.73.16-.22.32-.85 1.07-1.04 1.29-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.86-1.6-1.92-1.79-2.24-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.22.05-.4-.03-.57-.08-.16-.7-1.77-1-2.42Z"/></svg>
+</a>
+
+<div id="ai-chat">
+  <button id="ai-chat-toggle" aria-label="Open DG5 assistant" aria-expanded="false">
+    <svg id="ai-chat-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <svg id="ai-chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div id="ai-chat-panel" role="dialog" aria-label="DG5 assistant chat">
+    <div id="ai-chat-head">
+      <div><b>DG5 Assistant</b><span>Ask about services, pricing conversations, or how to reach us — I'll point you the right way.</span></div>
+    </div>
+    <div id="ai-chat-body"></div>
+    <div id="ai-chat-quick"></div>
+    <form id="ai-chat-form">
+      <input id="ai-chat-input" type="text" placeholder="Ask something…" autocomplete="off">
+      <button type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+#wa-fab{ position:fixed; right:24px; bottom:72px; width:56px; height:56px; z-index:9997; display:flex; box-shadow:0 10px 30px rgba(13,13,18,0.28); border-radius:50%; transition:transform .2s ease; }
+#wa-fab:hover{ transform:scale(1.06); }
+#wa-fab svg{ width:100%; height:100%; }
+#ai-chat{ position:fixed; right:24px; bottom:138px; z-index:9998; font-family:var(--font-body,inherit); }
+#ai-chat-toggle{ width:56px; height:56px; border-radius:50%; border:none; cursor:pointer; background:var(--ink,#0d0d12); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(13,13,18,0.28); margin-left:auto; transition:transform .2s ease; }
+#ai-chat-toggle:hover{ transform:scale(1.06); }
+#ai-chat-toggle svg{ width:24px; height:24px; }
+#ai-chat-icon-close{ display:none; }
+#ai-chat.open #ai-chat-icon-open{ display:none; }
+#ai-chat.open #ai-chat-icon-close{ display:block; }
+#ai-chat-panel{ position:absolute; right:0; bottom:70px; width:340px; max-width:calc(100vw - 32px); max-height:70vh; background:#fff; border-radius:18px; box-shadow:0 24px 60px rgba(13,13,18,0.32); display:none; flex-direction:column; overflow:hidden; border:1px solid rgba(13,13,18,0.08); }
+#ai-chat.open #ai-chat-panel{ display:flex; }
+#ai-chat-head{ padding:16px 18px; background:var(--ink,#0d0d12); color:#fff; }
+#ai-chat-head b{ display:block; font-family:var(--font-display); text-transform:uppercase; font-size:15px; letter-spacing:0.02em; }
+#ai-chat-head span{ display:block; font-size:11.5px; opacity:0.72; margin-top:4px; line-height:1.4; }
+#ai-chat-body{ flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px; background:#f5f3ec; min-height:180px; }
+.ai-msg{ font-size:13px; line-height:1.5; padding:9px 12px; border-radius:12px; max-width:85%; }
+.ai-msg.bot{ background:#fff; color:#0d0d12; align-self:flex-start; border-bottom-left-radius:3px; }
+.ai-msg.user{ background:#0d0d12; color:#fff; align-self:flex-end; border-bottom-right-radius:3px; }
+#ai-chat-quick{ display:flex; flex-wrap:wrap; gap:6px; padding:0 14px 10px; background:#f5f3ec; }
+.ai-chip{ font-size:11px; padding:6px 10px; border-radius:20px; border:1px solid rgba(13,13,18,0.18); background:#fff; cursor:pointer; white-space:nowrap; }
+.ai-chip:hover{ border-color:#0d0d12; }
+#ai-chat-form{ display:flex; gap:8px; padding:12px; border-top:1px solid rgba(13,13,18,0.08); background:#fff; }
+#ai-chat-input{ flex:1; border:1px solid rgba(13,13,18,0.18); border-radius:10px; padding:9px 12px; font-size:13px; outline:none; }
+#ai-chat-input:focus{ border-color:#0d0d12; }
+#ai-chat-form button{ width:38px; height:38px; border-radius:10px; border:none; background:#0d0d12; color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; }
+#ai-chat-form button svg{ width:16px; height:16px; }
+@media (max-width:480px){ #wa-fab{ right:16px; bottom:64px; width:50px; height:50px; } #ai-chat{ right:16px; bottom:126px; } #ai-chat-toggle{ width:50px; height:50px; } }
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById('ai-chat');
+  if(!root) return;
+  var toggle = document.getElementById('ai-chat-toggle');
+  var body = document.getElementById('ai-chat-body');
+  var quick = document.getElementById('ai-chat-quick');
+  var form = document.getElementById('ai-chat-form');
+  var input = document.getElementById('ai-chat-input');
+
+  var FAQ = [
+    { k: ['service','services','do you do','offer'], a: "DG5 covers six disciplines: web development, SEO, performance ads, ecommerce development, SMS &amp; WhatsApp chatbots and marketing automation — all under one accountable team. Which one are you exploring?" },
+    { k: ['price','pricing','cost','budget','quote'], a: "Every engagement is scoped to your goals, so pricing depends on scope rather than a fixed rate card. The fastest way to get a real number is a free audit call — want me to point you to the contact form?" },
+    { k: ['contact','call','talk','reach','email','phone'], a: "You can reach the team directly at hello@dg5agency.com or +91 78999 13338, or use the contact form lower on this page. I can also open WhatsApp for you." },
+    { k: ['location','bangalore','mumbai','where','office','address'], a: "DG5 is based in Bangalore and works with clients across Delhi, Mumbai, Hyderabad, Bangalore, Dubai and beyond." },
+    { k: ['internship','job','career','hiring','resume'], a: "Internship applications are open — email your resume to hello@dg5agency.com with the role in the subject line. We never hire over WhatsApp or Telegram." },
+    { k: ['seo'], a: "Our SEO work covers technical audits, keyword research, on-page optimisation and content strategy. Want the full breakdown on the SEO services page?" },
+    { k: ['website','web development','site'], a: "We design and build responsive, SEO-ready websites tuned for speed, accessibility and conversion. Check the web development page for details." },
+    { k: ['whatsapp','chatbot','bot'], a: "We build SMS &amp; WhatsApp automation that answers questions, recovers carts and qualifies leads around the clock — like this widget, but tuned for your business." },
+    { k: ['hi','hello','hey'], a: "Hey! I'm the DG5 assistant. Ask me about our services, where we're based, or how to reach the team." }
+  ];
+
+  function addMsg(text, who){
+    var el = document.createElement('div');
+    el.className = 'ai-msg ' + who;
+    el.innerHTML = text;
+    body.appendChild(el);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function reply(q){
+    var lower = q.toLowerCase();
+    for (var i = 0; i < FAQ.length; i++){
+      for (var j = 0; j < FAQ[i].k.length; j++){
+        if (lower.indexOf(FAQ[i].k[j]) !== -1){ return FAQ[i].a; }
+      }
+    }
+    return "I don't have a canned answer for that yet — email hello@dg5agency.com or message us on WhatsApp and the team will get back to you directly.";
+  }
+
+  var greeted = false;
+  toggle.addEventListener('click', function(){
+    var open = root.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open && !greeted){
+      greeted = true;
+      addMsg("Hey! I'm the DG5 assistant. Ask me about our services, pricing conversations, or how to reach the team.", 'bot');
+      ['Our services', 'Where are you based?', 'How do I get a quote?'].forEach(function(label){
+        var chip = document.createElement('button');
+        chip.type = 'button'; chip.className = 'ai-chip'; chip.textContent = label;
+        chip.addEventListener('click', function(){ ask(label); });
+        quick.appendChild(chip);
+      });
+    }
+  });
+
+  function ask(q){
+    addMsg(q, 'user');
+    setTimeout(function(){ addMsg(reply(q), 'bot'); }, 300);
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = input.value.trim();
+    if (!q) return;
+    ask(q);
+    input.value = '';
+  });
+})();
+</script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
