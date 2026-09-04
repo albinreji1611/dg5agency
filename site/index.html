@@ -374,11 +374,11 @@
   .logos-head{ display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:30px; }
   .logos-head p{ font-family:var(--font-mono); font-size:12.5px; color:var(--muted); letter-spacing:0.03em; }
   .logos-track-wrap{ overflow:visible; }
-  .logos-track{ display:flex; flex-wrap:wrap; gap:56px; width:auto; align-items:center; justify-content:flex-start; }
-  .logo-item{ display:flex; align-items:center; flex-shrink:0; opacity:0.75; transition:opacity .3s ease, transform .3s ease; background:transparent; }
-  .logo-item:hover{ opacity:1; transform:translateY(-2px); }
-  .logo-item img{ height:64px; width:auto; max-width:220px; object-fit:contain; display:block; background:transparent; }
-  @media (max-width:640px){ .logos-track{ gap:36px; justify-content:center; } .logo-item img{ height:48px; max-width:160px; } }
+  .logos-track{ display:flex; flex-wrap:wrap; gap:72px; width:100%; align-items:center; justify-content:center; }
+  .logo-item{ display:flex; align-items:center; flex-shrink:0; opacity:1; transition:transform .3s ease; background:transparent; }
+  .logo-item:hover{ transform:translateY(-2px); }
+  .logo-item img{ height:88px; width:auto; max-width:280px; object-fit:contain; display:block; background:transparent; }
+  @media (max-width:640px){ .logos-track{ gap:40px; } .logo-item img{ height:60px; max-width:190px; } }
 
   /* ============ typing ticker (status bar) ============ */
   #ticker{
