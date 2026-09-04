@@ -374,12 +374,12 @@
   #logos{ padding:56px 0 110px; }
   .logos-head{ display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:30px; }
   .logos-head p{ font-family:var(--font-mono); font-size:12.5px; color:var(--muted); letter-spacing:0.03em; }
-  .logos-track-wrap{ overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-  .logos-track{ display:flex; gap:64px; width:max-content; animation:logosLeft 30s linear infinite; align-items:center; }
-  .logo-item{ display:flex; align-items:center; flex-shrink:0; opacity:0.6; transition:opacity .3s ease; background:transparent; }
-  .logo-item:hover{ opacity:1; }
-  .logo-item img{ height:44px; width:auto; max-width:160px; object-fit:contain; display:block; background:transparent; }
-  @keyframes logosLeft{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  .logos-track-wrap{ overflow:visible; }
+  .logos-track{ display:flex; flex-wrap:wrap; gap:56px; width:auto; align-items:center; justify-content:flex-start; }
+  .logo-item{ display:flex; align-items:center; flex-shrink:0; opacity:0.75; transition:opacity .3s ease, transform .3s ease; background:transparent; }
+  .logo-item:hover{ opacity:1; transform:translateY(-2px); }
+  .logo-item img{ height:64px; width:auto; max-width:220px; object-fit:contain; display:block; background:transparent; }
+  @media (max-width:640px){ .logos-track{ gap:36px; justify-content:center; } .logo-item img{ height:48px; max-width:160px; } }
 
   /* ============ typing ticker (status bar) ============ */
   #ticker{
@@ -1149,10 +1149,10 @@
 </div>
 
 <style>
-#wa-fab{ position:fixed; right:24px; bottom:24px; width:56px; height:56px; z-index:9997; display:flex; box-shadow:0 10px 30px rgba(13,13,18,0.28); border-radius:50%; transition:transform .2s ease; }
+#wa-fab{ position:fixed; right:24px; bottom:72px; width:56px; height:56px; z-index:9997; display:flex; box-shadow:0 10px 30px rgba(13,13,18,0.28); border-radius:50%; transition:transform .2s ease; }
 #wa-fab:hover{ transform:scale(1.06); }
 #wa-fab svg{ width:100%; height:100%; }
-#ai-chat{ position:fixed; right:24px; bottom:90px; z-index:9998; font-family:var(--font-body,inherit); }
+#ai-chat{ position:fixed; right:24px; bottom:138px; z-index:9998; font-family:var(--font-body,inherit); }
 #ai-chat-toggle{ width:56px; height:56px; border-radius:50%; border:none; cursor:pointer; background:var(--ink,#0d0d12); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 30px rgba(13,13,18,0.28); margin-left:auto; transition:transform .2s ease; }
 #ai-chat-toggle:hover{ transform:scale(1.06); }
 #ai-chat-toggle svg{ width:24px; height:24px; }
@@ -1176,7 +1176,7 @@
 #ai-chat-input:focus{ border-color:#0d0d12; }
 #ai-chat-form button{ width:38px; height:38px; border-radius:10px; border:none; background:#0d0d12; color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; }
 #ai-chat-form button svg{ width:16px; height:16px; }
-@media (max-width:480px){ #wa-fab{ right:16px; bottom:16px; width:50px; height:50px; } #ai-chat{ right:16px; bottom:78px; } #ai-chat-toggle{ width:50px; height:50px; } }
+@media (max-width:480px){ #wa-fab{ right:16px; bottom:64px; width:50px; height:50px; } #ai-chat{ right:16px; bottom:126px; } #ai-chat-toggle{ width:50px; height:50px; } }
 </style>
 
 <script>
